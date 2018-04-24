@@ -1,0 +1,15 @@
+<div class="pagebck">
+    <table class="hoverTable">
+        <tr *ngFor="let x of articles ,let j=index">
+            <td *ngIf="currentID == j"  style="color: black; font-size: 40px" (click)="selectArticleFunc(j)">
+                {{x.article_type}}
+            </td>
+            <td *ngIf="currentID != j" (click)="selectArticleFunc(j)">
+                {{x.article_type}}
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
